@@ -1160,3 +1160,8 @@ void pttClientJoinGroup(int gid)
 	pttJoinGroup(gid, 16);
 }
 
+void pttClientOffline()
+{
+	pttLogout();
+}
+

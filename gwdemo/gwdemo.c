@@ -17,6 +17,7 @@ extern void pttClientEnterGroup(int token, int type);
 extern void pttClientExitGroup(int gid);
 extern void pttClientDeleteGroup(int gid);
 extern void pttClientJoinGroup(int gid);
+extern void pttClientOffline();
 // 865223047568037
 // chn-access2c.hawk-sight.com
 int main()
@@ -40,6 +41,7 @@ int main()
 		printf("8.Exit group\n");
 		printf("9.Delete group\n");
 		printf("10.Join group\n");
+		printf("11.Logout\n");
 		printf("Please input cmd:");
 		scanf("%d", &cmd);
 		switch (cmd)
@@ -87,6 +89,9 @@ int main()
 			printf("Please input gid:");
 			scanf("%d", &gid);
 			pttClientJoinGroup(gid);
+			break;
+		case 11:
+			pttClientOffline();
 			break;
 		default:
 			break;
