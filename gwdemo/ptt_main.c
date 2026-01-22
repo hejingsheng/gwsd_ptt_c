@@ -18,6 +18,7 @@
 #include "GWPttEngine.h"
 
 #pragma comment(lib, "ws2_32.lib")
+#pragma comment(lib, "gwsd.lib")
 
 #define WM_USER_MESSAGE (WM_USER + 100)
 

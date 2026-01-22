@@ -7,6 +7,10 @@
 #include <time.h>
 #include <windows.h>
 
+#define VERSION "v1.0.2"
+#define AUTHOR  "Jack He"
+#define DATE    "2026/01/22"
+
 extern void pttClientStart(const char *account, const char *password, const char *dns, int port);
 extern void pttClientQueryGroup(int pageNum, int pageSize);
 extern void pttClientQueryMember(int gid, int online, int pageNum, int pageSize);
@@ -39,7 +43,7 @@ void showMenuScreen(char *imei, char *dns, int port)
 	printf("╔═══════════════════════════════════════════════════════╗\n");
 	printf("║              GWSD Intercom System Platform            ║\n");
 	printf("╠═══════════════════════════════════════════════════════╣\n");
-	printf("║ Version: v1.0.1              Developer: Jack He       ║\n");
+	printf("║ Version: %s              Developer: %s       ║\n", VERSION, AUTHOR);
 	printf("╠═══════════════════════════════════════════════════════╣\n");
 	printf("║ Function Options:                                      ║\n");
 	printf("║  ┌─────────────────────────────────────────────┐      ║\n");
@@ -74,9 +78,9 @@ void showWelcomeScreen()
 	printf("              ║                                      ║\n");
 	printf("              ║    Welcome to GWSD Intercom System   ║\n");
 	printf("              ║                                      ║\n");
-	printf("              ║          Developer: Jack He          ║\n");
-	printf("              ║          Version: v1.0.1             ║\n");
-	printf("              ║           Year: 2026                 ║\n");
+	printf("              ║          Developer: %s          ║\n", AUTHOR);
+	printf("              ║          Version: %s             ║\n", VERSION);
+	printf("              ║           Year: %s                 ║\n", DATE);
 	printf("              ║                                      ║\n");
 	printf("              ╚══════════════════════════════════════╝\n");
 
@@ -100,7 +104,7 @@ void showGoodbyeScreen()
 	printf("              ║                                      ║\n");
 	printf("              ║    Thank you for using GWSD System   ║\n");
 	printf("              ║                                      ║\n");
-	printf("              ║          Developer: Jack He          ║\n");
+	printf("              ║          Developer: %s          ║\n", AUTHOR);
 	printf("              ║          Goodbye!                    ║\n");
 	printf("              ║                                      ║\n");
 	printf("              ╚══════════════════════════════════════╝\n");
