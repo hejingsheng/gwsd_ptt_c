@@ -233,6 +233,8 @@ int gwPttSaveVoice(int open, char *path);
 
 int gwPttNetCheck(int type, char *host, int port);
 
+int gwPttEnableMsg(int enable);
+
 int gwPttLogin(const char *account, const char *pass, const char *imei, const char *iccid);
 
 int gwPttQueryGroup(void);
@@ -360,6 +362,10 @@ int gwPttAISpeakEnd(void);
 int gwPttAICancel(void);
 
 int gwPttExitAI(void);
+
+int gwPttConfigAgeGain(int db);
+
+int gwPttConfigAgeBalance(int balanceLevel);
 
 #ifdef __cplusplus
 }
