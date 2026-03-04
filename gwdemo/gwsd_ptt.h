@@ -59,6 +59,7 @@ enum {
     GW_PTT_EVENT_AI_STATUS = 23,
     GW_PTT_EVENT_UNBIND = 24,
     GW_PTT_EVENT_QUERY_TMPGRP = 25,
+    GW_PTT_EVENT_RECV_TEXT = 26,
 };
 
 enum {

@@ -97,6 +97,8 @@ DLL_EXPORT int pttRegOnlineMsg(int groups[], int types[], int num, char security
 
 DLL_EXPORT int pttSendMsg(int sid, const char *snm, int type, int id, const char *rnm, int msgType, const char *content, const char *thumburl, int time);
 
+DLL_EXPORT int pttSendTextMsg(int rid,int type,const char *content);
+
 DLL_EXPORT int pttReportLocationGps(double lat, double lon,int type,int uid);
 
 DLL_EXPORT int pttReportLocationCell(int cellid, int lac, int mode, char *mcc, char *mnc,int type,int uid);
