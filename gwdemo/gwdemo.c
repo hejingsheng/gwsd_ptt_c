@@ -7,9 +7,9 @@
 #include <time.h>
 #include <windows.h>
 
-#define VERSION "v1.0.2"
+#define VERSION "v1.0.3"
 #define AUTHOR  "Jack He"
-#define DATE    "2026/01/22"
+#define DATE    "2026/03/09"
 
 extern void pttClientStart(const char *account, const char *password, const char *dns, int port);
 extern void pttClientQueryGroup(int pageNum, int pageSize);
@@ -80,7 +80,7 @@ void showWelcomeScreen()
 	printf("              ║                                      ║\n");
 	printf("              ║          Developer: %s          ║\n", AUTHOR);
 	printf("              ║          Version: %s             ║\n", VERSION);
-	printf("              ║           Year: %s                 ║\n", DATE);
+	printf("              ║           Year: %s           ║\n", DATE);
 	printf("              ║                                      ║\n");
 	printf("              ╚══════════════════════════════════════╝\n");
 

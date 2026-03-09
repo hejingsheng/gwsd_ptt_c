@@ -57,9 +57,4 @@
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Library Include="gwsd.lib">
-      <Filter>资源文件</Filter>
-    </Library>
-  </ItemGroup>
 </Project>
