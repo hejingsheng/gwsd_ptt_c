@@ -29,6 +29,8 @@ DLL_EXPORT int pttInit(GWPttEvent cb, GWMsgEvent cb1, GWPttAudioModule *audioMod
 
 DLL_EXPORT int pttSetLogCallback(int level, print_log_cb cb);
 
+DLL_EXPORT int pttControlLog(int level, char logToFile);
+
 DLL_EXPORT int pttSetQueuePath(const char *path);
 
 DLL_EXPORT int pttEnableMsg(int enable);

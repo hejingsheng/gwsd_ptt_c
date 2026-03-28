@@ -1066,7 +1066,7 @@ void pttClientStart(const char *account, const char *password, const char *dns, 
 	char *version = NULL;
 	version = pttGetVersion();
 	printf("gw ptt version %s\n", version);
-
+	pttControlLog(1, 1);
 	pttInit(onGWPttEvent, onGWMsgEvent, &pttAudioDevice, 0, GW_PTT_ENCODE_LEVEL_HIGH, 0);
 
 	pttClient = (PttClient*)malloc(sizeof(PttClient));
