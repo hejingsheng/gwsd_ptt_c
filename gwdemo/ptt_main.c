@@ -862,10 +862,10 @@ JOINGRP:
 	GWLOG_PRINT(GW_LOG_LEVEL_INFO, "join group success...");
 	while(1)
 	{
-		pttHeart(client->battery, client->net);
-		GWLOG_PRINT(GW_LOG_LEVEL_INFO, "send heart...");
 		client->heart_timeout = client->heart_period * TIME_1_SECOND;
 		PT_WAIT_UNTIL(pt, (client->heart_timeout == 0));
+		pttHeart(client->battery, client->net);
+		GWLOG_PRINT(GW_LOG_LEVEL_INFO, "send heart...");
 	}
 	PT_END(pt);
 }
