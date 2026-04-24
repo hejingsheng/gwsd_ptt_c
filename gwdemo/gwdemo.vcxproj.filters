@@ -35,9 +35,6 @@
     <ClInclude Include="GWPttEngine.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="gwsd_ptt.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="lc.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -54,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="GWLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gw_ptt.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

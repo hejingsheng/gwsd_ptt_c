@@ -1,9 +1,9 @@
 //
-// Created by hejingsheng on 2024/5/8.
+// Created by Administrator on 2024/5/8.
 //
 
-#ifndef GWSD_GWSD_PTT_H
-#define GWSD_GWSD_PTT_H
+#ifndef GW_GW_PTT_H
+#define GW_GW_PTT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -231,7 +231,7 @@ typedef void* (*memory_allocate)(unsigned int size);
 
 int gwPttSetCustomMalloc(memory_allocate alloc);
 
-int gwPttInit(GWPttEvent event, GWMsgEvent event1, GWVideoEvent event2, char externalCodec, int encodeLevel, int frameSize);
+int gwPttInit(GWPttEvent event, GWMsgEvent event1, GWVideoEvent event2, char externalCodec, int encodeLevel, int frameSize, char lowMemory);
 
 char *gwPttGetVersion(void);
 
@@ -381,4 +381,4 @@ int gwPttConfigAgeBalance(int balanceLevel);
 }
 #endif
 
-#endif //GWSD_GWSD_PTT_H
+#endif //GW_GW_PTT_H

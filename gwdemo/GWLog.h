@@ -2,8 +2,8 @@
 // Created by hejingsheng on 2024/12/4.
 //
 
-#ifndef GWSD_APP_GWLOG_H
-#define GWSD_APP_GWLOG_H
+#ifndef GW_APP_GWLOG_H
+#define GW_APP_GWLOG_H
 
 #include <stdio.h>
 
@@ -33,4 +33,4 @@ extern int gwlog_level;
 #ifdef  __cplusplus
 }
 #endif
-#endif //GWSD_APP_GWLOG_H
+#endif //GW_APP_GWLOG_H

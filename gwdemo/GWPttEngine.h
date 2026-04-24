@@ -2,18 +2,18 @@
  * GWEngine.h
  *
  *  Created on: 2024年5月24日
- *      Author: hejingsheng
+ *      Author: Administrator
  */
 
-#ifndef GWSD_GWPTTENGINE_H
-#define GWSD_GWPTTENGINE_H
+#ifndef GW_GWPTTENGINE_H
+#define GW_GWPTTENGINE_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #include "GWPttAudioDevice.h"
-#include "gwsd_ptt.h"
+#include "gw_ptt.h"
 
 #ifdef _WIN32
 #define DLL_EXPORT __declspec(dllexport)
@@ -26,6 +26,8 @@ typedef void (*print_log_cb)(char *log);
 DLL_EXPORT int pttSetCustomMalloc(memory_allocate alloc);
 
 DLL_EXPORT int pttInit(GWPttEvent cb, GWMsgEvent cb1, GWPttAudioModule *audioModule, char externalCodec, int encodeLevel, int framesize);
+
+DLL_EXPORT int pttInitWithoutAi(GWPttEvent cb, GWMsgEvent cb1, GWPttAudioModule *audioModule, char externalCodec, int encodeLevel, int framesize);
 
 DLL_EXPORT int pttSetLogCallback(int level, print_log_cb cb);
 
@@ -175,4 +177,4 @@ DLL_EXPORT int pttConfigAgeBalance(int balance);
 }
 #endif
 
-#endif /* GWSD_GWPTTENGINE_H */
+#endif /* GW_GWPTTENGINE_H */

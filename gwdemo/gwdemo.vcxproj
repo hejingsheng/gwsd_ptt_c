@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <!-- 改为 MultiByte -->
   </PropertyGroup>
@@ -98,7 +98,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;__WINDOWS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_WINSOCKAPI_;__WINDOWS__;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <!-- 移除 ConformanceMode 和 MinimalRebuild -->
       <!-- <ConformanceMode>false</ConformanceMode> -->
       <!-- <MinimalRebuild /> -->
@@ -118,7 +118,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gwsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwptt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -142,7 +142,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>gwsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwptt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -208,7 +208,7 @@
     <ClInclude Include="GWLog.h" />
     <ClInclude Include="GWPttAudioDevice.h" />
     <ClInclude Include="GWPttEngine.h" />
-    <ClInclude Include="gwsd_ptt.h" />
+    <ClInclude Include="gw_ptt.h" />
     <ClInclude Include="lc-addrlabels.h" />
     <ClInclude Include="lc-switch.h" />
     <ClInclude Include="lc.h" />

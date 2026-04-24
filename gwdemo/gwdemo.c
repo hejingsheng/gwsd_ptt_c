@@ -41,7 +41,7 @@ void showMenuScreen(char *imei, char *dns, int port)
 	system("cls");
 
 	printf("╔═══════════════════════════════════════════════════════╗\n");
-	printf("║              GWSD Intercom System Platform            ║\n");
+	printf("║              GWPTT Intercom System Platform           ║\n");
 	printf("╠═══════════════════════════════════════════════════════╣\n");
 	printf("║ Version: %s              Developer: %s       ║\n", VERSION, AUTHOR);
 	printf("╠═══════════════════════════════════════════════════════╣\n");
@@ -76,7 +76,7 @@ void showWelcomeScreen()
 	printf("\n\n\n");
 	printf("              ╔══════════════════════════════════════╗\n");
 	printf("              ║                                      ║\n");
-	printf("              ║    Welcome to GWSD Intercom System   ║\n");
+	printf("              ║    Welcome to GWPTT Intercom System  ║\n");
 	printf("              ║                                      ║\n");
 	printf("              ║          Developer: %s          ║\n", AUTHOR);
 	printf("              ║          Version: %s             ║\n", VERSION);
@@ -102,7 +102,7 @@ void showGoodbyeScreen()
 	printf("\n\n\n");
 	printf("              ╔══════════════════════════════════════╗\n");
 	printf("              ║                                      ║\n");
-	printf("              ║    Thank you for using GWSD System   ║\n");
+	printf("              ║    Thank you for using GWPTT System  ║\n");
 	printf("              ║                                      ║\n");
 	printf("              ║          Developer: %s          ║\n", AUTHOR);
 	printf("              ║          Goodbye!                    ║\n");
@@ -134,30 +134,30 @@ void showConfigScreen(char* dns, int* port, char* imei) {
 		system("cls");
 
 		printf("╔═══════════════════════════════════════════════════════╗\n");
-		printf("║           GWSD System Configuration                   ║\n");
+		printf("║           GWPTT System Configuration                  ║\n");
 		printf("╠═══════════════════════════════════════════════════════╣\n");
 		printf("║                                                       ║\n");
 		printf("║  Please enter the required configuration:             ║\n");
 		printf("║                                                       ║\n");
 		printf("║  ┌─────────────────────────────────────────────┐      ║\n");
-		printf("║  │                                             │      ║\n");
+		printf("║  │                                            │      ║\n");
 		printf("║  │  DNS Server Address:                       │      ║\n");
 		printf("║  │  (Required for connection)                 │      ║\n");
-		printf("║  │  (Default: chn-access2c.hawk-sight.com)    │      ║\n");
-		printf("║  │                                             │      ║\n");
+		printf("║  │  (Default: gwptt.com)                      │      ║\n");
+		printf("║  │                                            │      ║\n");
 		printf("║  │  > ");
 		fflush(stdout);
 		scanf("%s", dns);
 
 		// 添加默认值提示
 		if (strlen(dns) == 0) {
-			strcpy(dns, "chn-access2c.hawk-sight.com");
+			strcpy(dns, "ptt.abc.com");
 		}
 
 		printf("║  │                                             │      ║\n");
 		printf("║  │                                             │      ║\n");
-		printf("║  │  Server Port:                              │      ║\n");
-		printf("║  │  (1024-65535, Default: 23003)               │      ║\n");
+		printf("║  │  Server Port:                               │      ║\n");
+		printf("║  │  (1024-65535, Default: 10000)               │      ║\n");
 		printf("║  │                                             │      ║\n");
 		printf("║  │  > ");
 		fflush(stdout);
@@ -165,13 +165,13 @@ void showConfigScreen(char* dns, int* port, char* imei) {
 
 		// 验证端口
 		if (*port <= 0) {
-			*port = 23003; // 默认端口
+			*port = 10000; // 默认端口
 		}
 
 		printf("║  │                                             │      ║\n");
 		printf("║  │                                             │      ║\n");
-		printf("║  │  Device Identifier:                        │      ║\n");
-		printf("║  │  (Unique device ID, e.g., 865223047568037) │      ║\n");
+		printf("║  │  Device Identifier:                         │      ║\n");
+		printf("║  │  (Unique device ID, e.g., 865223047568037)  │      ║\n");
 		printf("║  │                                             │      ║\n");
 		printf("║  │  > ");
 		fflush(stdout);
