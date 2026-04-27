@@ -346,10 +346,8 @@ int main()
 	char imei[33];
 	char dns[256];
 	int port = 23003;
-	//showWelcomeScreen();
-	//showConfigScreen(dns, &port, imei);
-	strcpy(imei, "865223047568037");
-	strcpy(dns, "chn-access2c.hawk-sight.com");
+	showWelcomeScreen();
+	showConfigScreen(dns, &port, imei);
 	pttClientStart(imei, "111111", dns, port);
 	Sleep(1000);
 	while (1)
