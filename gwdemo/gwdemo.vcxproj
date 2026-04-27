@@ -79,11 +79,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>E:\work\VSProject\gwsd_ptt_c\gwdemo\gwsdpttlib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\work\VSProject\gwsd_ptt_c\gwdemo\gwsdpttlib\x86;E:\work\VSProject\gwsd_ptt_c\gwdemo\sdl2\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>E:\work\VSProject\gwsd_ptt_c\gwdemo\gwsdpttlib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\work\VSProject\gwsd_ptt_c\gwdemo\gwsdpttlib\x64;E:\work\VSProject\gwsd_ptt_c\gwdemo\sdl2\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -112,13 +112,14 @@
       <UseFullPaths>false</UseFullPaths>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <AdditionalIncludeDirectories>E:\work\VSProject\gwsd_ptt_c\gwdemo\sdl2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <!-- 确保没有 LanguageStandard 设置 -->
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gwptt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwptt.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,11 +139,12 @@
       <UseFullPaths>false</UseFullPaths>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <AdditionalIncludeDirectories>E:\work\VSProject\gwsd_ptt_c\gwdemo\sdl2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>gwptt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwptt.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -199,12 +201,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cJSON.c" />
+    <ClCompile Include="datalist.c" />
     <ClCompile Include="gwdemo.c" />
     <ClCompile Include="GWLog.c" />
     <ClCompile Include="ptt_main.c" />
+    <ClCompile Include="WinAudioDevice.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cJSON.h" />
+    <ClInclude Include="datalist.h" />
     <ClInclude Include="GWLog.h" />
     <ClInclude Include="GWPttAudioDevice.h" />
     <ClInclude Include="GWPttEngine.h" />
@@ -213,6 +218,7 @@
     <ClInclude Include="lc-switch.h" />
     <ClInclude Include="lc.h" />
     <ClInclude Include="pt.h" />
+    <ClInclude Include="WinAudioDevice.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -38,7 +38,7 @@ void showMenuScreen(char *imei, char *dns, int port)
 {
 	char timeStr[64];
 	GetCurrentTimeString(timeStr, sizeof(timeStr));
-	system("cls");
+	//system("cls");
 
 	printf("╔═══════════════════════════════════════════════════════╗\n");
 	printf("║              GWPTT Intercom System Platform           ║\n");
@@ -345,9 +345,11 @@ int main()
 	int token, type;
 	char imei[33];
 	char dns[256];
-	int port;
-	showWelcomeScreen();
-	showConfigScreen(dns, &port, imei);
+	int port = 23003;
+	//showWelcomeScreen();
+	//showConfigScreen(dns, &port, imei);
+	strcpy(imei, "865223047568037");
+	strcpy(dns, "chn-access2c.hawk-sight.com");
 	pttClientStart(imei, "111111", dns, port);
 	Sleep(1000);
 	while (1)
