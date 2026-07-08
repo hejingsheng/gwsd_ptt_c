@@ -31,6 +31,8 @@ DLL_EXPORT int pttInitWithoutAi(GWPttEvent cb, GWMsgEvent cb1, GWPttAudioModule 
 
 DLL_EXPORT int pttSetLogCallback(int level, print_log_cb cb);
 
+DLL_EXPORT int pttSetRecordDelay(int ms);
+
 DLL_EXPORT int pttControlLog(int level, char logToFile);
 
 DLL_EXPORT int pttSetQueuePath(const char *path);
@@ -52,6 +54,8 @@ DLL_EXPORT int pttLogin(const char *account, const char *pass, const char *imei,
 DLL_EXPORT int pttQueryGroup(void);
 
 DLL_EXPORT int pttQueryGroupByPage(int pageSize, int pageNum);
+
+DLL_EXPORT int pttQueryListenGroup(void);
 
 DLL_EXPORT int pttJoinGroup(int gid, int type);
 
@@ -87,6 +91,8 @@ DLL_EXPORT int pttGroupGeneralToken(int *gids, int num);
 
 DLL_EXPORT int pttGroupEnterByToken(int token, int type);
 
+DLL_EXPORT int pttGroupListen(int *gids, int num, int type);
+
 DLL_EXPORT int pttGetManagerInfo(void);
 
 DLL_EXPORT int pttUnbind(void);
@@ -121,7 +127,7 @@ DLL_EXPORT int pttQueryTmpGrp(int type);
 
 DLL_EXPORT int pttHeart(int battery, const char *net);
 
-DLL_EXPORT int pttSendSos(int sid, const char *snm, int id, long long ms, double lat, double lon, char hasLoc);
+DLL_EXPORT int pttSendSos(int sid, const char *sname, int rid, const char *rname, int type, double lat, double lon, char hasLoc, char status);
 
 DLL_EXPORT int pttSendSelfMsg(int id, int type, char *selfmsg, char offline);
 

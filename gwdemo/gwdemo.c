@@ -7,9 +7,9 @@
 #include <time.h>
 #include <windows.h>
 
-#define VERSION "v1.0.3"
+#define VERSION "v1.1.0"
 #define AUTHOR  "Jack He"
-#define DATE    "2026/03/09"
+#define DATE    "2026/07/08"
 
 extern void pttClientStart(const char *account, const char *password, const char *dns, int port);
 extern void pttClientQueryGroup(int pageNum, int pageSize);

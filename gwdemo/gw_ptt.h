@@ -67,6 +67,7 @@ enum {
     GW_PTT_EVENT_QUERY_TMPGRP = 25,
     GW_PTT_EVENT_RECV_TEXT = 26,
     GW_PTT_EVENT_NAME_CHANGE = 27,
+    GW_PTT_EVENT_RECV_SOS = 28,
 };
 
 enum {
@@ -169,6 +170,8 @@ enum {
     GW_MSG_STATUS_GROUP_TOKEN_ENTER = 18,
     GW_MSG_STATUS_UNBIND = 19,
     GW_MSG_STATUS_MANAGER_INFO = 20,
+    GW_MSG_STATUS_LISTEN_GROUP = 21,
+    GW_MSG_STATUS_QUERY_LISTEN_GROUP = 22,
 };
 
 enum {
@@ -271,6 +274,8 @@ int gwPttSpeakStartToDmr(char dmrtype, int dmrid, long long ms);
 
 int gwPttSpeak(int action, long long ms);
 
+int gwPttSetRecordDelay(int ms);
+
 int gwPttHeart(int battery, const char *net);
 
 int gwPttQueryTmpGrp(int type);
@@ -284,6 +289,10 @@ int gwPttGroupOperate(char *data, int type, char **response);
 int gwPttGeneralToken(int *gids, int num, char **response);
 
 int gwPttEnterGroupByToken(int token, int type, char **response);
+
+int gwPttListenGroup(int *gids, int num, int type, char **response);
+
+int gwPttGetListenGroup(char **response);
 
 int gwPttGetManagerInfo(char **response);
 
@@ -329,7 +338,7 @@ int gwPttSosMsg(int sid, const char *snm, int id, long long ms, double lat, doub
 
 int gwPttSendSelf(int rid, int type, char *data, int len, char offline);
 
-int gwPttSendText(int rid, int type, char *data, int len);
+int gwPttSendText(int rid, int type, char *data, int len, char sos);
 
 int gwPttAddDelGroupOfflineMsg(int group, int type, int act);
 
